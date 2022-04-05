@@ -45,3 +45,9 @@ h2 {
 p {
     color: rgb(146, 147, 156);
 }
+.accessoires img {
+    max-width: 200px;
+    max-height: 200px;
+    position: absolute;
+    opacity: 10%;
+}
