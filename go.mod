@@ -1,4 +1,4 @@
-module github.com/vimscape/goWeb
+module goWeb
 
 go 1.18
 
