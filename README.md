@@ -15,9 +15,9 @@ Is an easy to use and simple webserver, built with go. The structure and CLI are
 Installation manually with shell script.
 
 ```bash
-  git clone https://github.com/vimscape/goWeb
-  cd goWeb
-  sudo ./goWeb.sh
+git clone https://github.com/vimscape/goWeb
+cd goWeb
+sudo ./goWeb.sh
 ```
 After that you can simply run the application from everywhere, with:
 ```
