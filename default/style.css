@@ -39,8 +39,11 @@ body {
 }
 h2 {
     font-size: 20px;
-    color: rgb(146, 147, 156);
+    color: rgb(136, 137, 156);
     padding-top: 8px;
+}
+h4 {
+    color: rgb(136, 137, 156);
 }
 p {
     color: rgb(146, 147, 156);
@@ -50,4 +53,30 @@ p {
     max-height: 200px;
     position: absolute;
     opacity: 10%;
+}
+.install-process-manu {
+    padding: 2px;
+    list-style: none;
+    background-color: rgb(228, 226, 228);
+    width: 24rem;
+    border: 1px solid rgb(155, 156, 170);
+    box-shadow: -5px black;
+}
+.install-process-manu li {
+   padding: 2px 0px 2px 2px;
+}
+span {
+    background-color: rgb(228, 226, 228);
+}
+.documentation {
+    margin-top: 1rem;
+}
+.documentation h3 {
+    color: rgb(136, 137, 156);
+}
+.footer {
+    margin-top: 3rem;
+}
+.footer a {
+    text-decoration: none;
 }
