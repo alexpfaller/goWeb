@@ -15,6 +15,14 @@ func ConfigServer() {
 			break
 		}
 	}
+	switch menuOutcome {
+	case 1:
+		fmt.Println("to set sub-page")
+	case 2:
+		SetPort()
+	case 3:
+		fmt.Println("To create redirect")
+	}
 }
 func ConfigMenu() {
 	yellow := color.FgYellow.Render
