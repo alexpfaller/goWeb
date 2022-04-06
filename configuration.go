@@ -6,6 +6,9 @@ import (
 	"github.com/gookit/color"
 )
 
+var SubPageInput int
+var Subpages = make([]int, SubPageInput)
+
 func ConfigServer() {
 	color.Success.Println("Webserver configuration menu")
 	for {
@@ -17,7 +20,7 @@ func ConfigServer() {
 	}
 	switch menuOutcome {
 	case 1:
-		fmt.Println("to set sub-page")
+		SetSubPage()
 	case 2:
 		SetPort()
 	case 3:
@@ -43,4 +46,12 @@ func ConfigmenuValidation() byte {
 		menuOutcome = 3
 	}
 	return menuOutcome
+}
+func SetSubPage() {
+	fmt.Printf("Enter amount of subpages you want to create: ")
+	fmt.Scan(&SubPageInput)
+	for i := 0; i < SubPageInput; i++ {
+		fmt.Printf("Enter %dth element: ", i)
+		fmt.Scanf("%d", &Subpages[i])
+	}
 }

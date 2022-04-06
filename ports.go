@@ -7,6 +7,8 @@ import (
 )
 
 var defaultPort uint16 = 8090
+var ServerPort string
+var ServerPortZwei string
 
 func SetPort() {
 	color.Success.Println("Port configuration menu")
@@ -50,7 +52,22 @@ func SetStaticPort() {
 	yellow := color.FgYellow.Render
 	fmt.Printf("%sSet your own static port\n", yellow("[1]"))
 	fmt.Printf("%sUse default static port (:%v)\n", yellow("[2]"), defaultPort)
+	fmt.Scan(&userInput)
+	switch userInput {
+	case 1:
+		CustomStaticPort()
+	case 2:
+		DefaultPort()
+	}
+}
+func CustomStaticPort() {
+	fmt.Scan(&userInput)
+	ServerPort = fmt.Sprintf(":%v", userInput)
+	color.Success.Println("Your server is now ap and running...")
+	StartServer(ServerPort)
 }
 func DefaultPort() {
-	// fmt.Println(defaultPort)
+	ServerPort = ":8090"
+	color.Success.Println("Your server is now ap and running...")
+	StartServer(ServerPort)
 }

@@ -1,12 +1,10 @@
 package main
 
 import (
-	"net/http"
-
 	"github.com/gookit/color"
 )
 
-var userInput byte
+var userInput uint16
 var menuOutcome byte
 var runningPort int32
 
@@ -24,14 +22,9 @@ func main() {
 		ConfigServer()
 	case 2:
 		color.Success.Println("Your server is now ap and running...")
-		startServer()
+		StartServer(ServerPort)
 	}
 }
 
 // menu()
 // menuValidation()
-
-func startServer() {
-	http.Handle("/", http.FileServer(http.Dir("default")))
-	http.ListenAndServe(":8090", nil)
-}
