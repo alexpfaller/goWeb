@@ -6,32 +6,24 @@ import (
 	"github.com/gookit/color"
 )
 
-func ConfigServer() {
-	color.Success.Println("Webserver configuration menu")
+func SetPort() {
+	color.Success.Println("Port configuration menu")
 	for {
-		ConfigMenu()
-		ConfigmenuValidation()
+		PortMenu()
+		PortmenuValidation()
 		if menuOutcome >= 1 || menuOutcome <= 3 {
 			break
 		}
 	}
-	switch menuOutcome {
-	case 1:
-		fmt.Println("to set sub-page")
-	case 2:
-		SetPort()
-	case 3:
-		fmt.Println("To create redirect")
-	}
 }
-func ConfigMenu() {
+func PortMenu() {
 	yellow := color.FgYellow.Render
-	fmt.Printf("%sTo set sub-page\n", yellow("[1]"))
-	fmt.Printf("%sTo set port\n", yellow("[2]"))
-	fmt.Printf("%sTo create redirect\n", yellow("[3]"))
+	fmt.Printf("%sTo scan for open ports\n", yellow("[1]"))
+	fmt.Printf("%sTo set auto port\n", yellow("[2]"))
+	fmt.Printf("%sTo set static port\n", yellow("[3]"))
 	fmt.Scan(&userInput)
 }
-func ConfigmenuValidation() byte {
+func PortmenuValidation() byte {
 	if userInput < 1 || userInput > 3 {
 		color.Error.Println("Invalid input!")
 		color.Error.Println("Please chose one of the above given options..")
@@ -43,4 +35,7 @@ func ConfigmenuValidation() byte {
 		menuOutcome = 3
 	}
 	return menuOutcome
+}
+func DefaultPort() {
+
 }
