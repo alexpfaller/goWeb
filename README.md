@@ -34,7 +34,7 @@ cd default/
 ```
 If you want to stop the running webserver, press `ctrl + c` to abort its execution.
 
-//More Documentation about other features soon
+By default, the port is set to 8090, you can set a static port to whatever you want, please be aware of already used ports. In case you don't really care about it and just want a different port than 8090, we recommend using the `auto port` function, to assign a random unused port to your webserver.
 
 [Documentation](https://linktodocumentation)
 
