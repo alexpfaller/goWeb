@@ -68,6 +68,6 @@ func CustomStaticPort() {
 }
 func DefaultPort() {
 	ServerPort = ":8090"
-	color.Success.Println("Your server is now ap and running...")
+	color.Success.Println("Your server is now up and running...")
 	StartServer(ServerPort)
 }

@@ -21,8 +21,7 @@ func main() {
 	case 1:
 		ConfigServer()
 	case 2:
-		color.Success.Println("Your server is now ap and running...")
-		StartServer(ServerPort)
+		DefaultPort()
 	}
 }
 
