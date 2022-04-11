@@ -63,7 +63,7 @@ func SetStaticPort() {
 func CustomStaticPort() {
 	fmt.Scan(&userInput)
 	ServerPort = fmt.Sprintf(":%v", userInput)
-	color.Success.Println("Your server is now ap and running...")
+	color.Success.Println("Your server is now up and running...")
 	StartServer(ServerPort)
 }
 func DefaultPort() {
