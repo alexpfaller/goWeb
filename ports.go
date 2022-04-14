@@ -39,6 +39,7 @@ func PortmenuValidation() byte {
 	if userInput < 1 || userInput > 3 {
 		color.Error.Println("Invalid input!")
 		color.Error.Println("Please chose one of the above given options..")
+		SetPort()
 	} else if userInput == 1 {
 		menuOutcome = 1
 	} else if userInput == 2 {
@@ -64,10 +65,12 @@ func CustomStaticPort() {
 	fmt.Scan(&userInput)
 	ServerPort = fmt.Sprintf(":%v", userInput)
 	color.Success.Println("Your server is now up and running...")
+	color.Green.Printf("http://127.0.0.1%v", ServerPort)
 	StartServer(ServerPort)
 }
 func DefaultPort() {
 	ServerPort = ":8090"
 	color.Success.Println("Your server is now up and running...")
+	color.Green.Printf("http://127.0.0.1%v", ServerPort)
 	StartServer(ServerPort)
 }

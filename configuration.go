@@ -38,6 +38,7 @@ func ConfigmenuValidation() byte {
 	if userInput < 1 || userInput > 3 {
 		color.Error.Println("Invalid input!")
 		color.Error.Println("Please chose one of the above given options..")
+		ConfigServer()
 	} else if userInput == 1 {
 		menuOutcome = 1
 	} else if userInput == 2 {
