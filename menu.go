@@ -17,6 +17,7 @@ func MenuValidation() byte {
 	if userInput < 1 || userInput > 3 {
 		color.Error.Println("Invalid input!")
 		color.Error.Println("Please chose one of the above given options..")
+		main()
 	} else if userInput == 1 {
 		menuOutcome = 1
 	} else if userInput == 2 {
