@@ -6,7 +6,6 @@ import (
 
 var userInput uint16
 var menuOutcome byte
-var runningPort int32
 
 func main() {
 	color.Cyan.Printf("Welcome to goWeb\n\n\n")
